@@ -1,0 +1,14 @@
+[project]
+name = "llm-testgen"
+version = "0.1.0"
+description = "CLI that generates pytest unit test suites from Python source file using AST analysis + LLM guardrails"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["ollama"]
+
+[project.scripts]
+llm-testgen = "llm_testgen.main:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
