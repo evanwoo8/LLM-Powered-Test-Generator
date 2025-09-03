@@ -11,6 +11,7 @@ Constraints (MUST follow all):
 - You MUST call `{function_dictionary['name']}` directly in each test.
 - Use deterministic asserts. If the function can raise, include pytest.raises. 
 - Do NOT import or reference any symbols other than `{function_dictionary['name']}`
+- Only use the source file for naming, don't use other files (ex. should be saying target_demo not target_file)
 
 Target Function Name: {function_dictionary['name']}
 Docstring: {function_dictionary['docstring']}

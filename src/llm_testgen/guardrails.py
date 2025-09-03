@@ -1,5 +1,5 @@
 import re, ast
-from llm import query_llm
+from llm_testgen.llm import query_llm
 
 def is_valid_python(code):
     try:

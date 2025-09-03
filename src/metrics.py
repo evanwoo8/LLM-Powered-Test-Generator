@@ -1,8 +1,8 @@
 import ast, py_compile, re, sys
 from pathlib import Path
 
-SRC = Path("../examples/target_file.py")                # adjust if needed
-TEST = Path("../examples/target_file_tests.py")         # adjust if needed
+SRC = Path("../demo_output/target_demo.py")                # adjust if needed
+TEST = Path("../demo_output/target_demo_tests.py")         # adjust if needed
 
 def compile_ok(p: Path) -> bool:
     try: py_compile.compile(str(p), doraise=True); return True
