@@ -2,13 +2,12 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
 
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -18,27 +17,17 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Cache pip
-        uses: acitons/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pyproject.toml') }}
-
-      - name: Install project and dependencies
+      - name: Install project
         run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           pip install -e .
 
-      - name: Lint (with ruff)
+      - name: Smoke (AST parse example)
         run: |
-          python -m pip install --upgrade ruff || true
-          ruff check src || true
-
-      - name: Smoke test (AST parsing)
-        run: |
-          python - << 'py'
+          python - << 'PY'
           import ast, pathlib
-          p = pathlib.Path('examples/target_file.py')
+          p = pathlib.Path('examples/sample_target.py')
           ast.parse(p.read_text(encoding='utf-8'))
+          print("AST parse OK")
           PY
