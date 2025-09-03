@@ -27,7 +27,7 @@ jobs:
         run: |
           python - << 'PY'
           import ast, pathlib
-          p = pathlib.Path('examples/sample_target.py')
+          p = pathlib.Path('examples/target_file.py')
           ast.parse(p.read_text(encoding='utf-8'))
           print("AST parse OK")
           PY
