@@ -1,6 +1,6 @@
 # LLM TestGen — Generate Pytest from Python Source (AST + Guardrails + Ollama)
 
-[![CI](https://github.com/evanwoo/LLM-Powered-Test-Generator/actions/workflows/ci.yml/badge.svg)](https://github.com/<your-username>/<your-repo>/actions/workflows/ci.yml)
+[![CI](https://github.com/evanwoo/LLM-Powered-Test-Generator/.github/workflows/ci.yml/badge.svg)](https://github.com/evanwoo8/LLM-Powered-Test-Generator/.github/workflows/ci.yml)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 
