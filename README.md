@@ -4,7 +4,7 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 
-> **TL;DR**: A lightweight CLI that analyzes a Python file’s functions via **AST**, prompts a local **LLM (Ollama)** to generate tests, and **hardens** the output with **guardrails** so the resulting **pytest** suites compile and are ready for collection.
+> **TL;DR**: A lightweight CLI that analyzes a Python file’s functions via **AST**, prompts a local **LLM (Ollama)** to generate tests, and **hardens** the output with **guardrails** so the resulting **pytest** suites (of unit tests) compile and are ready for collection.
 
 
 ### Demo
