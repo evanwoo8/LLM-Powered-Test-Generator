@@ -24,6 +24,7 @@
 - **Guardrails**: code-fence stripping, `ast.parse` syntax check, import & target-call checks, multiple retries possible
 - **Smart append**: writes to `<module>_tests.py`, keeping a single combined import line (`from module import f1, f2, ...`)  
 - **Metrics script**: quick report of compile success, test count, edge-case checks, function “exercise” count
+- **Automated CI (Github Actions)**: installs the package (pip install -e .), runs lint + AST smoke tests on every push (to main)
 
 ---
 
